@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ArrayOfTodoPattern>
+    <TodoPattern>
+        <Id>1</Id>
+        <Title>Todo</Title>
+        <SearchPattern><![CDATA[(?<=\W|^)(?<TAG>TODO)(.*)]]></SearchPattern>
+    </TodoPattern>
+    <TodoPattern>
+        <Id>2</Id>
+        <Title>Hack</Title>
+        <SearchPattern><![CDATA[(?<=\W|^)(?<TAG>HACK)(.*)]]></SearchPattern>
+    </TodoPattern>
+    <TodoPattern>
+        <Id>3</Id>
+        <Title>Ask</Title>
+        <SearchPattern><![CDATA[(?<=\W|^)(?<TAG>ASK)(.*)]]></SearchPattern>
+    </TodoPattern>
+    <TodoPattern>
+        <Id>4</Id>
+        <Title>Bug</Title>
+        <SearchPattern><![CDATA[(?<=\W|^)(?<TAG>BUG)(.*)]]></SearchPattern>
+    </TodoPattern>
+</ArrayOfTodoPattern>
