@@ -15,6 +15,10 @@ SQL Todo Explorer is a SQL Server Management Studio add-in. It helps to navigate
 ##Download
 
     git clone https://github.com/DamnTools/SqlTodoExplorer.git
+    
+##Build
+
+In order to build the source, you need to install SQL Server Management Studio 2012 or above (also the Express version).
 
 ##Install
 
@@ -43,21 +47,17 @@ The add-in view is a floating (by default) panel in your Sql Server Management S
 
 ![SQL Todo Explorer panel](https://github.com/wiki/DamnTools/SqlTodoExplorer/images/panel.png)
 
-##Build
-
-In order to build the source, you need to install SQL Server Management Studio 2012 or above (also the Express version).
-
 ##Debug
 
 In Visual Studio:
 
 - Open the project properties of "SqlTodoExplorer" project (ALT+ENTER) and fill in the "Debug->Start external application" option with the SQL Management Studio executable (Ssms.exe) full path:
 
-		C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\ManagementStudio\Ssms.exe
+        C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\ManagementStudio\Ssms.exe
 
 - Set the "Working directory" option to the Ssms.exe parent folder:
 
-		C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\ManagementStudio\
+        C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\ManagementStudio\
 		
 - Close the project properties
 
