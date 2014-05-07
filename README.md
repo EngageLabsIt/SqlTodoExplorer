@@ -14,21 +14,26 @@ SQL Todo Explorer is a SQL Server Management Studio add-in. It helps to navigate
 
 ##Download
 
-    git clone git://github.com/DamnTools/SqlTodoExplorer/SSMS.git
-    cd into your folder where you have it copied to or downloaded in.
-    git submodule update --init
+    git clone https://github.com/DamnTools/SqlTodoExplorer.git
 
 ##Install
 
+- Build the solution SqlTodoExplorer.sln
 
-- Copy the "DamnTools.SqlTodoExplorer.AddIn" file in the following folder:
+- Copy the `DamnTools.SqlTodoExplorer.dll` created in the bin folder to the following folder:
+
+        C:\Program Files\DamnTools\SqlTodoExplorer
+
+- Copy the `DamnTools.SqlTodoExplorer.AddIn` file in the following folder:
 
         C:\ProgramData\Microsoft\SQL Server Management Studio\<SQL Server Version>\AddIns
 
+        Microsoft SQL Server Management Studio 2012:
+        C:\ProgramData\Microsoft\SQL Server Management Studio\11.0\AddIns
+        
 - Edit the copy of the .AddIn file and change the <Assembly> path:
 
-        <Assembly>C:\Program files (x86)\SqlTodoExplorer\DamnTools.SqlTodoExplorer.dll</Assembly>
-
+        <Assembly>C:\Program Files\DamnTools\SqlTodoExplorer\DamnTools.SqlTodoExplorer.dll</Assembly>
 
 After the setup, you will find a new menu command under the "Tools" menu of Sql Server Management Studio.
 
@@ -38,11 +43,9 @@ The add-in view is a floating (by default) panel in your Sql Server Management S
 
 ![SQL Todo Explorer panel](https://github.com/wiki/DamnTools/SqlTodoExplorer/images/panel.png)
 
-
 ##Build
 
-You need to install SQL Server Management Studio 2012 or above (also the Express version).
-
+In order to build the source, you need to install SQL Server Management Studio 2012 or above (also the Express version).
 
 ##Debug
 
@@ -55,10 +58,12 @@ In Visual Studio:
 - Set the "Working directory" option to the Ssms.exe parent folder:
 
 		C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\ManagementStudio\
+		
 - Close the project properties
-- Go to menu "Debug->Exceptions"... and uncheck the "Thrown" on "PInvokeStackImbalance" and "IvalidVariant" under "Managed Debugging Assistant"
-- Hit F5
 
+- Go to menu "Debug->Exceptions"... and uncheck the "Thrown" on "PInvokeStackImbalance" and "IvalidVariant" under "Managed Debugging Assistant"
+
+- Hit F5
 
 ##Features
 
@@ -71,6 +76,14 @@ In Visual Studio:
 - Double click an item in order to get the ALTER statement of the selected object in a new query window
 - Refresh the connection context
 - Export the results as CSV or XML file
+
+##Contributing
+
+1. Clone
+2. Branch
+3. Make changes
+4. Push
+5. Make a pull request
 
 ##Authors
 
@@ -88,17 +101,9 @@ DamnTools Sql Todo Explorer is released under the [MIT License].
 
 Icon and Logo created by [Daniela Malvisi]
 
-##Contributing
-
-1. Clone
-2. Branch
-3. Make changes
-4. Push
-5. Make a pull request
-
 
 [Daniela Malvisi]: https://it.linkedin.com/pub/daniela-malvisi/61/859/275
 [MIT License]: https://github.com/DamnTools/License.txt
-[contributor]: https://github.com/DamnTools/landslide/contributors
+[contributor]: https://github.com/DamnTools/SqlTodoExplorer/graphs/contributors
 [@suxstellino]: https://twitter.com/suxstellino
-[@dennymic]: https://twitter.com/suxstellino
+[@dennymic]: https://twitter.com/dennymic
