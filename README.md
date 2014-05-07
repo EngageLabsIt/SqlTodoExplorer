@@ -1,10 +1,10 @@
-![DamnTools logo](https://github.com/wiki/DamnTools/SqlTodoExplorer/images/logo.png)
+![DamnTools logo](https://raw.githubusercontent.com/wiki/DamnTools/SqlTodoExplorer/images/logo.png)
 SQL Todo Explorer
 =========
 
 SQL Todo Explorer is a SQL Server Management Studio add-in. It helps to navigate the list of "to-do" items within your databases. 
 
-![SQL Todo Explorer icon](https://github.com/wiki/DamnTools/SqlTodoExplorer/images/sqltodoexplorer_ico.png)
+![SQL Todo Explorer icon](https://raw.githubusercontent.com/wiki/DamnTools/SqlTodoExplorer/images/sqltodoexplorer_ico.png)
 
 "to-do" items can be marked as:
   - TODO
@@ -41,11 +41,11 @@ In order to build the source, you need to install SQL Server Management Studio 2
 
 After the setup, you will find a new menu command under the "Tools" menu of Sql Server Management Studio.
 
-![SQL Todo Explorer menu command](https://github.com/wiki/DamnTools/SqlTodoExplorer/images/new_menu_command.png)
+![SQL Todo Explorer menu command](https://raw.githubusercontent.com/wiki/DamnTools/SqlTodoExplorer/images/new_menu_command.png)
 
 The add-in view is a floating (by default) panel in your Sql Server Management Studio. You can dock the panel, pin and move it as any other panel within the IDE.
 
-![SQL Todo Explorer panel](https://github.com/wiki/DamnTools/SqlTodoExplorer/images/panel.png)
+![SQL Todo Explorer panel](https://raw.githubusercontent.com/wiki/DamnTools/SqlTodoExplorer/images/panel.png)
 
 ##Debug
 
