@@ -103,7 +103,7 @@ Icon and Logo created by [Daniela Malvisi]
 
 
 [Daniela Malvisi]: https://it.linkedin.com/pub/daniela-malvisi/61/859/275
-[MIT License]: https://github.com/DamnTools/License.txt
+[MIT License]: https://github.com/DamnTools/SqlTodoExplorer/blob/master/LICENSE
 [contributor]: https://github.com/DamnTools/SqlTodoExplorer/graphs/contributors
 [@suxstellino]: https://twitter.com/suxstellino
 [@dennymic]: https://twitter.com/dennymic
