@@ -1,5 +1,4 @@
 ![DamnTools logo](https://raw.githubusercontent.com/wiki/DamnTools/SqlTodoExplorer/images/logo.png)
-![SQL Todo Explorer icon](https://raw.githubusercontent.com/wiki/DamnTools/SqlTodoExplorer/images/sqltodoexplorer_ico.png)
 SQL Todo Explorer
 =========
 
