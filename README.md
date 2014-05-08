@@ -80,6 +80,8 @@ In Visual Studio:
 
 ##Contributing
 
+Your contributions to SqlTodoExplorer are very welcome. If you find a bug, please raise it as an issue. Even better fix it and send a pull request. If you like to help out with existing bugs and feature requests just check out the list of [issues] and grab and fix one.
+
 1. Clone
 2. Branch
 3. Make changes
@@ -108,3 +110,4 @@ Icon and Logo created by [Daniela Malvisi]
 [contributor]: https://github.com/DamnTools/SqlTodoExplorer/graphs/contributors
 [@suxstellino]: https://twitter.com/suxstellino
 [@dennymic]: https://twitter.com/dennymic
+[issues]: https://github.com/DamnTools/SqlTodoExplorer/issues
