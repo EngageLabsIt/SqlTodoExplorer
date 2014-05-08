@@ -11,15 +11,15 @@ SQL Todo Explorer is a SQL Server Management Studio add-in. It helps to navigate
   - BUG
   - ASK
 
-##<a id="download">Download</a>
+##Download
 
     git clone https://github.com/DamnTools/SqlTodoExplorer.git
     
-##<a id="build">Build</a>
+##Build
 
 In order to build the source, you need to install SQL Server Management Studio 2012 or above (also the Express version).
 
-##<a id="install">Install</a>
+##Install
 
 - Build the solution SqlTodoExplorer.sln
 
@@ -46,7 +46,7 @@ The add-in view is a floating (by default) panel in your Sql Server Management S
 
 ![SQL Todo Explorer panel](https://raw.githubusercontent.com/wiki/DamnTools/SqlTodoExplorer/images/panel.png)
 
-##<a id="debug">Debug</a>
+##Debug
 
 In Visual Studio:
 
@@ -66,7 +66,7 @@ In Visual Studio:
 
 - Hit F5
 
-##<a id="features">Features</a>
+##Features
 
 - Get the list of "to-do" items (TODO, HACK, BUG, ASK) of the selected connection in a specific user database
 - Filter by database
@@ -78,11 +78,11 @@ In Visual Studio:
 - Refresh the connection context
 - Export the results as CSV or XML file
 
-##<a id="how-to-contribute">How to contribute?</a>
+##How to contribute?
 
 Your contributions to SqlTodoExplorer are very welcome. If you find a bug, please raise it as an issue. Even better fix it and send a pull request. If you like to help out with existing bugs and feature requests just check out the list of [issues] and grab and fix one.
 
-###<a id="contribution-guideline">Contribution guideline</a>
+###Contribution guideline
 This project uses [GitHub flow] for pull requests.
 So if you want to contribute, fork the repo, preferably create a local branch to avoid conflicts with other activities, fix an issue, run a build of the solution, and send a PR if all is green.
 
@@ -91,7 +91,7 @@ Before working on your fork make sure you pull the latest so you work on top of 
 Also before sending the pull request please rebase your code as there is a chance there have been new commits pushed after you pulled last.
 Please refer to [this guide](https://gist.github.com/jbenet/ee6c9ac48068889b0912#the-workflow) if you're new to git (thanks to [Juan Batiz-Benet](https://github.com/jbenet)).
 
-##<a id="authors">Authors</a>
+##Authors
 
 - Michael Denny ([@dennymic])
 - Alessandro Alpi ([@suxstellino])
@@ -99,11 +99,11 @@ Please refer to [this guide](https://gist.github.com/jbenet/ee6c9ac48068889b0912
 __Contributors__
 - See the [contributor] section
 
-##<a id="license">License</a>
+##License
 
 DamnTools Sql Todo Explorer is released under the [MIT License].
 
-##<a id="icon">Icon</a>
+##Icon
 
 Icon and Logo created by [Daniela Malvisi]
 
