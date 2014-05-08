@@ -1,5 +1,4 @@
 ![DamnTools logo](https://raw.githubusercontent.com/wiki/DamnTools/SqlTodoExplorer/images/logo.png)
-![SQL Todo Explorer icon](https://raw.githubusercontent.com/wiki/DamnTools/SqlTodoExplorer/images/sqltodoexplorer_ico.png)
 SQL Todo Explorer
 =========
 
@@ -78,15 +77,22 @@ In Visual Studio:
 - Refresh the connection context
 - Export the results as CSV or XML file
 
-##Contributing
+##How to contribute?
 
 Your contributions to SqlTodoExplorer are very welcome. If you find a bug, please raise it as an issue. Even better fix it and send a pull request. If you like to help out with existing bugs and feature requests just check out the list of [issues] and grab and fix one.
 
-1. Clone
-2. Branch
-3. Make changes
-4. Push
-5. Make a pull request
+###Contribution guideline
+This project uses [GitHub flow] for pull requests.
+So if you want to contribute, fork the repo, preferably create a local branch to avoid conflicts with other activities, fix an issue, run a build of the solution, and send a PR if all is green.
+
+1. `master` must always be deployable.
+2. **all changes** made through feature branches (pull-request + merge)
+3. rebase to avoid/resolve conflicts; merge in to `master`
+
+Please rebase your code on top of the latest commits.
+Before working on your fork make sure you pull the latest so you work on top of the latest commits to avoid merge conflicts.
+Also before sending the pull request please rebase your code as there is a chance there have been new commits pushed after you pulled last.
+Please refer to [this guide](https://gist.github.com/jbenet/ee6c9ac48068889b0912#the-workflow) if you're new to git (thanks to [Juan Batiz-Benet](https://github.com/jbenet)).
 
 ##Authors
 
@@ -111,3 +117,4 @@ Icon and Logo created by [Daniela Malvisi]
 [@suxstellino]: https://twitter.com/suxstellino
 [@dennymic]: https://twitter.com/dennymic
 [issues]: https://github.com/DamnTools/SqlTodoExplorer/issues
+[GitHub flow]: http://scottchacon.com/2011/08/31/github-flow.html
