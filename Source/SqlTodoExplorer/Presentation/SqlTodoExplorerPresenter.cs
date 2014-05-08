@@ -36,9 +36,15 @@ namespace DamnTools.SqlTodoExplorer.Presentation
         
         public void ViewOnRefreshClicked()
         {
-            RefreshControlsAndRebindData();
+            // gets the selected database id (prior to refhresh)
+            var databaseId = _view.Database.Id;
 
+            // updates/rebinds controls
+            RefreshControlsAndRebindData();
             BindDatabases();
+
+            // selects the last database selected
+            _view.SetDabaseName(_view.GetDabaseNameFromId(databaseId));
         }
 
         public void ViewOnDatabaseSelected()

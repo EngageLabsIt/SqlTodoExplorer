@@ -85,5 +85,15 @@ namespace DamnTools.SqlTodoExplorer.Presentation
         Stream OpenFileTxt();
 
         Stream OpenFileXml();
+
+        /// <summary>
+        /// Returns a DatabaseName object by a given id
+        /// </summary>
+        DatabaseName GetDabaseNameFromId(int id);
+
+        /// <summary>
+        /// Sets a DatabaseName object to the database list based control
+        /// </summary>
+        void SetDabaseName(DatabaseName database);
     }
 }

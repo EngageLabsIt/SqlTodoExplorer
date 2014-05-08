@@ -8,6 +8,7 @@ using DamnTools.SqlTodoExplorer.Presentation.Helpers;
 using DamnTools.SqlTodoExplorer.Presentation.Model;
 using DamnTools.SqlTodoExplorer.Presentation.Model.Data;
 using DamnTools.SqlTodoExplorer.Services;
+using Microsoft.SqlServer.Management.Smo;
 using Resources = DamnTools.SqlTodoExplorer.Properties.Resources;
 using RoutineType = DamnTools.SqlTodoExplorer.Presentation.Model.Data.RoutineType;
 
@@ -476,6 +477,16 @@ namespace DamnTools.SqlTodoExplorer.Presentation
             {
                 OnNodeDoubleClicked(treeNodeMetaData);
             }
+        }
+
+        public DatabaseName GetDabaseNameFromId(int id)
+        {
+            return this.toolStripComboBoxDatabases.Items.Cast<DatabaseName>().FirstOrDefault(item => item.Id == id);
+        }
+
+        public void SetDabaseName(DatabaseName database)
+        {
+            this.toolStripComboBoxDatabases.SelectedItem = database;
         }
 
         #endregion
