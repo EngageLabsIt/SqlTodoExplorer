@@ -11,15 +11,15 @@ SQL Todo Explorer is a SQL Server Management Studio add-in. It helps to navigate
   - BUG
   - ASK
 
-##Download
+##<a id="download">Download</a>
 
     git clone https://github.com/DamnTools/SqlTodoExplorer.git
     
-##Build
+##<a id="build">Build</a>
 
 In order to build the source, you need to install SQL Server Management Studio 2012 or above (also the Express version).
 
-##Install
+##<a id="install">Install</a>
 
 - Build the solution SqlTodoExplorer.sln
 
@@ -46,7 +46,7 @@ The add-in view is a floating (by default) panel in your Sql Server Management S
 
 ![SQL Todo Explorer panel](https://raw.githubusercontent.com/wiki/DamnTools/SqlTodoExplorer/images/panel.png)
 
-##Debug
+##<a id="debug">Debug</a>
 
 In Visual Studio:
 
@@ -66,7 +66,7 @@ In Visual Studio:
 
 - Hit F5
 
-##Features
+##<a id="features">Features</a>
 
 - Get the list of "to-do" items (TODO, HACK, BUG, ASK) of the selected connection in a specific user database
 - Filter by database
@@ -78,17 +78,20 @@ In Visual Studio:
 - Refresh the connection context
 - Export the results as CSV or XML file
 
-##Contributing
+##<a id="how-to-contribute">How to contribute?</a>
 
 Your contributions to SqlTodoExplorer are very welcome. If you find a bug, please raise it as an issue. Even better fix it and send a pull request. If you like to help out with existing bugs and feature requests just check out the list of [issues] and grab and fix one.
 
-1. Clone
-2. Branch
-3. Make changes
-4. Push
-5. Make a pull request
+###<a id="contribution-guideline">Contribution guideline</a>
+This project uses [GitHub flow] for pull requests.
+So if you want to contribute, fork the repo, preferably create a local branch to avoid conflicts with other activities, fix an issue, run a build of the solution, and send a PR if all is green.
 
-##Authors
+Please rebase your code on top of the latest commits.
+Before working on your fork make sure you pull the latest so you work on top of the latest commits to avoid merge conflicts.
+Also before sending the pull request please rebase your code as there is a chance there have been new commits pushed after you pulled last.
+Please refer to [this guide](https://gist.github.com/jbenet/ee6c9ac48068889b0912#the-workflow) if you're new to git (thanks to [Juan Batiz-Benet](https://github.com/jbenet)).
+
+##<a id="authors">Authors</a>
 
 - Michael Denny ([@dennymic])
 - Alessandro Alpi ([@suxstellino])
@@ -96,11 +99,11 @@ Your contributions to SqlTodoExplorer are very welcome. If you find a bug, pleas
 __Contributors__
 - See the [contributor] section
 
-##License
+##<a id="license">License</a>
 
 DamnTools Sql Todo Explorer is released under the [MIT License].
 
-##Icon
+##<a id="icon">Icon</a>
 
 Icon and Logo created by [Daniela Malvisi]
 
@@ -111,3 +114,4 @@ Icon and Logo created by [Daniela Malvisi]
 [@suxstellino]: https://twitter.com/suxstellino
 [@dennymic]: https://twitter.com/dennymic
 [issues]: https://github.com/DamnTools/SqlTodoExplorer/issues
+[GitHub flow]: http://scottchacon.com/2011/08/31/github-flow.html
