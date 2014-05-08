@@ -1,10 +1,9 @@
 ![DamnTools logo](https://raw.githubusercontent.com/wiki/DamnTools/SqlTodoExplorer/images/logo.png)
+![SQL Todo Explorer icon](https://raw.githubusercontent.com/wiki/DamnTools/SqlTodoExplorer/images/sqltodoexplorer_ico.png)
 SQL Todo Explorer
 =========
 
 SQL Todo Explorer is a SQL Server Management Studio add-in. It helps to navigate the list of "to-do" items within your databases. 
-
-![SQL Todo Explorer icon](https://raw.githubusercontent.com/wiki/DamnTools/SqlTodoExplorer/images/sqltodoexplorer_ico.png)
 
 "to-do" items can be marked as:
   - TODO
@@ -53,11 +52,13 @@ In Visual Studio:
 
 - Open the project properties of "SqlTodoExplorer" project (ALT+ENTER) and fill in the "Debug->Start external application" option with the SQL Management Studio executable (Ssms.exe) full path:
 
-        C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\ManagementStudio\Ssms.exe
+        C:\Program Files (x86)\Microsoft SQL Server\<SQL Server Version>\AddIns
+\Tools\Binn\ManagementStudio\Ssms.exe
 
 - Set the "Working directory" option to the Ssms.exe parent folder:
 
-        C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\ManagementStudio\
+        C:\Program Files (x86)\Microsoft SQL Server\<SQL Server Version>\AddIns
+\Tools\Binn\ManagementStudio\
 		
 - Close the project properties
 
