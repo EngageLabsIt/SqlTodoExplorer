@@ -86,6 +86,10 @@ Your contributions to SqlTodoExplorer are very welcome. If you find a bug, pleas
 This project uses [GitHub flow] for pull requests.
 So if you want to contribute, fork the repo, preferably create a local branch to avoid conflicts with other activities, fix an issue, run a build of the solution, and send a PR if all is green.
 
+1. `master` must always be deployable.
+2. **all changes** made through feature branches (pull-request + merge)
+3. rebase to avoid/resolve conflicts; merge in to `master`
+
 Please rebase your code on top of the latest commits.
 Before working on your fork make sure you pull the latest so you work on top of the latest commits to avoid merge conflicts.
 Also before sending the pull request please rebase your code as there is a chance there have been new commits pushed after you pulled last.
