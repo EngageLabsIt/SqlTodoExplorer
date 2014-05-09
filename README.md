@@ -16,7 +16,14 @@ SQL Todo Explorer is a SQL Server Management Studio add-in. It helps to navigate
     
 ##Build
 
-In order to build the source, you need to install SQL Server Management Studio 2012 or above (also the Express version).
+In order to build the source, you need to install SQL Server Management Studio 2012 (also the Express version).
+
+##Supported versions of SQL Server Management Studio
+- SSMS 2012
+- SSMS 2012 Express
+
+Support for other versions are in the [issues] section.
+
 
 ##Install
 
