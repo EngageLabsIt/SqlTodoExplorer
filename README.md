@@ -22,11 +22,11 @@ In order to build the source, you need to install SQL Server Management Studio 2
 
 - Build the solution SqlTodoExplorer.sln
 
-- Copy the `DamnTools.SqlTodoExplorer.dll` created in the bin folder to the following folder:
+- Copy the `DamnTools.SqlTodoExplorer.dll` created in the bin folder to the following folder (create it if not exists):
 
         C:\Program Files\DamnTools\SqlTodoExplorer
 
-- Copy the `DamnTools.SqlTodoExplorer.AddIn` file in the following folder:
+- Copy the `DamnTools.SqlTodoExplorer.AddIn` file in the following folder  (create it if not exists):
 
         C:\ProgramData\Microsoft\SQL Server Management Studio\<SQL Server Version>\AddIns
 
