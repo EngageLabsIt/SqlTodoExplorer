@@ -16,17 +16,24 @@ SQL Todo Explorer is a SQL Server Management Studio add-in. It helps to navigate
     
 ##Build
 
-In order to build the source, you need to install SQL Server Management Studio 2012 or above (also the Express version).
+In order to build the source, you need to install SQL Server Management Studio 2012 (also the Express version).
+
+##Supported versions of SQL Server Management Studio
+- SSMS 2012
+- SSMS 2012 Express
+
+Support for other versions are in the [issues] section.
+
 
 ##Install
 
 - Build the solution SqlTodoExplorer.sln
 
-- Copy the `DamnTools.SqlTodoExplorer.dll` created in the bin folder to the following folder:
+- Copy the `DamnTools.SqlTodoExplorer.dll` created in the bin folder to the following folder (create it if not exists):
 
         C:\Program Files\DamnTools\SqlTodoExplorer
 
-- Copy the `DamnTools.SqlTodoExplorer.AddIn` file in the following folder:
+- Copy the `DamnTools.SqlTodoExplorer.AddIn` file in the following folder  (create it if not exists):
 
         C:\ProgramData\Microsoft\SQL Server Management Studio\<SQL Server Version>\AddIns
 
