@@ -1,7 +1,3 @@
-![DamnTools logo](https://raw.githubusercontent.com/wiki/DamnTools/SqlTodoExplorer/images/logo.png)
-SQL Todo Explorer
-=========
-
 SQL Todo Explorer is a SQL Server Management Studio add-in. It helps to navigate the list of "to-do" items within your databases. 
 
 "to-do" items can be marked as:
