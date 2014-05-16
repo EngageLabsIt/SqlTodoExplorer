@@ -1,0 +1,543 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DamnTools.SqlTodoExplorer</name>
+    </assembly>
+    <members>
+        <member name="T:DamnTools.SqlTodoExplorer.Connect">
+            <summary>The object for implementing an Add-in.</summary>
+            <seealso class='IDTExtensibility2' />
+        </member>
+        <member name="M:DamnTools.SqlTodoExplorer.Connect.OnConnection(System.Object,Extensibility.ext_ConnectMode,System.Object,System.Array@)">
+            <summary>
+                Implements the OnConnection method of the IDTExtensibility2 interface. Receives notification that the Add-in
+                is being loaded.
+            </summary>
+            <param term='application'>Root object of the host application.</param>
+            <param term='connectMode'>Describes how the Add-in is being loaded.</param>
+            <param term='addInInst'>Object representing this Add-in.</param>
+            <seealso class='IDTExtensibility2' />
+        </member>
+        <member name="M:DamnTools.SqlTodoExplorer.Connect.OnDisconnection(Extensibility.ext_DisconnectMode,System.Array@)">
+            <summary>
+                Implements the OnDisconnection method of the IDTExtensibility2 interface. Receives notification that the
+                Add-in is being unloaded.
+            </summary>
+            <param term='disconnectMode'>Describes how the Add-in is being unloaded.</param>
+            <param term='custom'>Array of parameters that are host application specific.</param>
+            <seealso class='IDTExtensibility2' />
+        </member>
+        <member name="M:DamnTools.SqlTodoExplorer.Connect.QueryStatus(System.String,EnvDTE.vsCommandStatusTextWanted,EnvDTE.vsCommandStatus@,System.Object@)">
+            <summary>
+                Implements the QueryStatus method of the IDTCommandTarget interface. This is called when the command's
+                availability is updated
+            </summary>
+            <param term='commandName'>The name of the command to determine state for.</param>
+            <param term='neededText'>Text that is needed for the command.</param>
+            <param term='status'>The state of the command in the user interface.</param>
+            <param term='commandText'>Text requested by the neededText parameter.</param>
+            <seealso class='Exec' />
+        </member>
+        <member name="M:DamnTools.SqlTodoExplorer.Connect.Exec(System.String,EnvDTE.vsCommandExecOption,System.Object@,System.Object@,System.Boolean@)">
+            <summary>Implements the Exec method of the IDTCommandTarget interface. This is called when the command is invoked.</summary>
+            <param term='commandName'>The name of the command to execute.</param>
+            <param term='executeOption'>Describes how the command should be run.</param>
+            <param term='varIn'>Parameters passed from the caller to the command handler.</param>
+            <param term='varOut'>Parameters passed from the command handler to the caller.</param>
+            <param term='handled'>Informs the caller if the command was handled or not.</param>
+            <seealso class='Exec' />
+        </member>
+        <member name="M:DamnTools.SqlTodoExplorer.Connect.OnAddInsUpdate(System.Array@)">
+            <summary>
+                Implements the OnAddInsUpdate method of the IDTExtensibility2 interface. Receives notification when the
+                collection of Add-ins has changed.
+            </summary>
+            <param term='custom'>Array of parameters that are host application specific.</param>
+            <seealso class='IDTExtensibility2' />
+        </member>
+        <member name="M:DamnTools.SqlTodoExplorer.Connect.OnStartupComplete(System.Array@)">
+            <summary>
+                Implements the OnStartupComplete method of the IDTExtensibility2 interface. Receives notification that the
+                host application has completed loading.
+            </summary>
+            <param term='custom'>Array of parameters that are host application specific.</param>
+            <seealso class='IDTExtensibility2' />
+        </member>
+        <member name="M:DamnTools.SqlTodoExplorer.Connect.OnBeginShutdown(System.Array@)">
+            <summary>
+                Implements the OnBeginShutdown method of the IDTExtensibility2 interface. Receives notification that the host
+                application is being unloaded.
+            </summary>
+            <param term='custom'>Array of parameters that are host application specific.</param>
+            <seealso class='IDTExtensibility2' />
+        </member>
+        <member name="M:DamnTools.SqlTodoExplorer.Presentation.ISqlTodoExplorerView.ClearSelectedResults">
+            <summary>
+            removes the row selection on grid at load or change text
+            </summary>
+        </member>
+        <member name="M:DamnTools.SqlTodoExplorer.Presentation.ISqlTodoExplorerView.EnableTreeview">
+            <summary>
+            Shows the treeview instead of datagridview (hierarchycal list)
+            </summary>
+        </member>
+        <member name="M:DamnTools.SqlTodoExplorer.Presentation.ISqlTodoExplorerView.EnableTreeviewBasedItems">
+            <summary>
+            Enables the treeview based controls
+            </summary>
+        </member>
+        <member name="M:DamnTools.SqlTodoExplorer.Presentation.ISqlTodoExplorerView.EnableDatagridview">
+            <summary>
+            Shows the datagridview instead of treeview (flat list)
+            </summary>
+        </member>
+        <member name="M:DamnTools.SqlTodoExplorer.Presentation.ISqlTodoExplorerView.DisableTreeviewBasedItems">
+            <summary>
+            Disables the treeview based controls
+            </summary>
+        </member>
+        <member name="M:DamnTools.SqlTodoExplorer.Presentation.ISqlTodoExplorerView.GetDabaseNameFromId(System.Int32)">
+            <summary>
+            Returns a DatabaseName object by a given id
+            </summary>
+        </member>
+        <member name="M:DamnTools.SqlTodoExplorer.Presentation.ISqlTodoExplorerView.SetDabaseName(DamnTools.SqlTodoExplorer.Presentation.Model.DatabaseName)">
+            <summary>
+            Sets a DatabaseName object to the database list based control
+            </summary>
+        </member>
+        <member name="M:DamnTools.SqlTodoExplorer.Presentation.Model.IPresentationDataService.GetDataRecords(System.String,DamnTools.SqlTodoExplorer.Services.ITodoPattern)">
+            <summary>
+            Gets data from the source provider.
+            </summary>
+        </member>
+        <member name="M:DamnTools.SqlTodoExplorer.Presentation.Model.IPresentationDataService.GetDatabases">
+            <summary>
+            Gets database list from the source provider.
+            </summary>
+        </member>
+        <member name="M:DamnTools.SqlTodoExplorer.Presentation.Model.IPresentationDataService.GetPatterns">
+            <summary>
+            Gets all the search patterns.
+            </summary>
+        </member>
+        <member name="M:DamnTools.SqlTodoExplorer.Presentation.Model.IPresentationDataService.RefreshCurrentConnection">
+            <summary>
+            Refresh the connection selecting the current instance 
+            where the user is working on. It first checks the active 
+            script/document, if not document is active, it fallsback
+            to the object explorer and get the selected instance.
+            </summary>
+        </member>
+        <member name="M:DamnTools.SqlTodoExplorer.Presentation.Model.IPresentationDataService.NavigateTo(DamnTools.SqlTodoExplorer.Services.TodoItem)">
+            <summary>
+            Script the object as alter, and move the caret where 
+            the to-do has been found.
+            </summary>
+        </member>
+        <member name="M:DamnTools.SqlTodoExplorer.Presentation.SqlTodoExplorerPresenter.ViewOnCommentTypeFilterSelected">
+            <summary>
+            Changes the treeview results based on FilterItemType 
+            </summary>
+        </member>
+        <member name="M:DamnTools.SqlTodoExplorer.Presentation.SqlTodoExplorerPresenter.ViewOnGroupByItemSelected">
+            <summary>
+            Changes the result view layout (grouped by object types or comment type)
+            </summary>
+        </member>
+        <member name="M:DamnTools.SqlTodoExplorer.Presentation.SqlTodoExplorerPresenter.ViewOnSaveFileDialogTxtConfirmed">
+            <summary>
+            Export to TXT file (csv format)
+            </summary>
+        </member>
+        <member name="M:DamnTools.SqlTodoExplorer.Presentation.SqlTodoExplorerPresenter.ViewOnSaveFileDialogXmlConfirmed">
+            <summary>
+            Export to XML file
+            </summary>
+        </member>
+        <member name="M:DamnTools.SqlTodoExplorer.Presentation.SqlTodoExplorerPresenter.ViewOnSearchTextChanged">
+            <summary>
+            Filters with the as you type search
+            </summary>
+        </member>
+        <member name="M:DamnTools.SqlTodoExplorer.Presentation.SqlTodoExplorerPresenter.ViewOnNodeDoubleClicked(DamnTools.SqlTodoExplorer.Presentation.Model.TreeNodeMetaData)">
+            <summary>
+            Script the object as alter, and move the caret where 
+            the to-do has been found.
+            </summary>
+        </member>
+        <member name="M:DamnTools.SqlTodoExplorer.Presentation.SqlTodoExplorerPresenter.Init">
+            <summary>
+            Inits the controls
+            </summary>
+        </member>
+        <member name="M:DamnTools.SqlTodoExplorer.Presentation.SqlTodoExplorerPresenter.BindToolboxData">
+            <summary>
+            Loads toolstrip control data
+            </summary>
+        </member>
+        <member name="M:DamnTools.SqlTodoExplorer.Presentation.SqlTodoExplorerPresenter.BindGroupByObjectTypes">
+            <summary>
+            Binds the group by type list
+            </summary>
+        </member>
+        <member name="M:DamnTools.SqlTodoExplorer.Presentation.SqlTodoExplorerPresenter.BindFilterItemTypes">
+            <summary>
+            Binds the filter type list
+            </summary>
+        </member>
+        <member name="M:DamnTools.SqlTodoExplorer.Presentation.SqlTodoExplorerPresenter.BindDatabases">
+            <summary>
+            Binds the database list given by the data source
+            </summary>
+        </member>
+        <member name="M:DamnTools.SqlTodoExplorer.Presentation.SqlTodoExplorerPresenter.BindTreeviewData(DamnTools.SqlTodoExplorer.Presentation.Model.GroupByItemType,DamnTools.SqlTodoExplorer.Services.ITodoPattern)">
+            <summary>
+            Binds the treeview from data source
+            </summary>
+            <param name="groupByItemType">Layout stlye</param>
+            <param name="todoPattern">ITodoPattern filter</param>
+        </member>
+        <member name="M:DamnTools.SqlTodoExplorer.Presentation.SqlTodoExplorerPresenter.BindFlatListData(DamnTools.SqlTodoExplorer.Services.ITodoPattern)">
+            <summary>
+            Groups the results by a flat list
+            </summary>
+            <param name="todoPattern">ITodoPattern filter</param>
+        </member>
+        <member name="M:DamnTools.SqlTodoExplorer.Presentation.SqlTodoExplorerPresenter.RefreshControlsAndRebindData">
+            <summary>
+            Updates the status of the results controls
+            </summary>
+        </member>
+        <member name="M:DamnTools.SqlTodoExplorer.Presentation.SqlTodoExplorerView.InitializeControls">
+            <summary>
+            Inits the controls
+            </summary>
+        </member>
+        <member name="M:DamnTools.SqlTodoExplorer.Presentation.SqlTodoExplorerView.UpdateCollectionWithProcedureRootNode(System.Collections.Generic.List{System.Windows.Forms.TreeNode},DamnTools.SqlTodoExplorer.Presentation.Model.Data.RoutineDataRecord)">
+            <summary>
+            Updates the given collection with a new item (OBJECT TYPE LAYOUT, Procedures)
+            </summary>
+            <param name="collectionToBeUpdated">Collection to be updated</param>
+            <param name="newItem">New item to manage</param>
+        </member>
+        <member name="M:DamnTools.SqlTodoExplorer.Presentation.SqlTodoExplorerView.UpdateCollectionWithFunctionRootNode(System.Collections.Generic.List{System.Windows.Forms.TreeNode},DamnTools.SqlTodoExplorer.Presentation.Model.Data.RoutineDataRecord)">
+            <summary>
+            Updates the given collection with a new item (OBJECT TYPE LAYOUT, Functions)
+            </summary>
+            <param name="collectionToBeUpdated">Collection to be updated</param>
+            <param name="newItem">New item to manage</param>
+        </member>
+        <member name="M:DamnTools.SqlTodoExplorer.Presentation.SqlTodoExplorerView.UpdateCollectionWithCommentRootNode(System.Collections.Generic.List{System.Windows.Forms.TreeNode},DamnTools.SqlTodoExplorer.Presentation.Model.Data.RoutineDataRecord)">
+            <summary>
+            Updates the given collection with a new item (COMMENT TYPE LAYOUT, Hack)
+            </summary>
+            <param name="collectionToBeUpdated">Collection to be updated</param>
+            <param name="newItem">New item to manage</param>
+        </member>
+        <member name="M:DamnTools.SqlTodoExplorer.Presentation.SqlTodoExplorerView.toolStripButtonExpandAll_Click(System.Object,System.EventArgs)">
+            <summary>
+            Expands all nodes of the treeview
+            </summary>
+        </member>
+        <member name="M:DamnTools.SqlTodoExplorer.Presentation.SqlTodoExplorerView.toolStripButtonCollapseAll_Click(System.Object,System.EventArgs)">
+            <summary>
+            Collapse all nodes of the treeview
+            </summary>
+        </member>
+        <member name="M:DamnTools.SqlTodoExplorer.Presentation.SqlTodoExplorerView.toolStripMenuItemExportAsText_Click(System.Object,System.EventArgs)">
+            <summary>
+            Shows the save file dialog (TXT)
+            </summary>
+        </member>
+        <member name="M:DamnTools.SqlTodoExplorer.Presentation.SqlTodoExplorerView.toolStripButtonExport_ButtonClick(System.Object,System.EventArgs)">
+            <summary>
+            Default export behavior
+            </summary>
+        </member>
+        <member name="M:DamnTools.SqlTodoExplorer.Presentation.SqlTodoExplorerView.toolStripMenuItemExportAsXml_Click(System.Object,System.EventArgs)">
+            <summary>
+            Shows the save file dialog (XML)
+            </summary>
+        </member>
+        <member name="F:DamnTools.SqlTodoExplorer.Presentation.SqlTodoExplorerView.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:DamnTools.SqlTodoExplorer.Presentation.SqlTodoExplorerView.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:DamnTools.SqlTodoExplorer.Presentation.SqlTodoExplorerView.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:DamnTools.SqlTodoExplorer.Presentation.Model.PresentationDataService.GetDataRecords(System.String,DamnTools.SqlTodoExplorer.Services.ITodoPattern)">
+            <summary>
+            Gets data from the source provider
+            </summary>
+        </member>
+        <member name="M:DamnTools.SqlTodoExplorer.Presentation.Model.PresentationDataService.GetDatabases">
+            <summary>
+            Gets database list from the source provider
+            </summary>
+        </member>
+        <member name="M:DamnTools.SqlTodoExplorer.Presentation.Model.PresentationDataService.GetPatterns">
+            <summary>
+            Gets all the search patterns.
+            </summary>
+        </member>
+        <member name="M:DamnTools.SqlTodoExplorer.Presentation.Model.PresentationDataService.RefreshCurrentConnection">
+            <summary>
+            Refresh the connection selecting the current instance 
+            where the user is working on. It first checks the active 
+            script/document, if not document is active, it fallsback
+            to the object explorer and get the selected instance.
+            </summary>
+        </member>
+        <member name="M:DamnTools.SqlTodoExplorer.Presentation.Model.PresentationDataService.NavigateTo(DamnTools.SqlTodoExplorer.Services.TodoItem)">
+            <summary>
+            Script the object as alter, and move the caret where 
+            the to-do has been found.
+            </summary>
+        </member>
+        <member name="T:DamnTools.SqlTodoExplorer.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:DamnTools.SqlTodoExplorer.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:DamnTools.SqlTodoExplorer.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:DamnTools.SqlTodoExplorer.Properties.Resources.arrow_Sync_16xLG">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:DamnTools.SqlTodoExplorer.Properties.Resources.Collapse">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:DamnTools.SqlTodoExplorer.Properties.Resources.ColumnCommentType">
+            <summary>
+              Looks up a localized string similar to Tag.
+            </summary>
+        </member>
+        <member name="P:DamnTools.SqlTodoExplorer.Properties.Resources.ColumnDefinition">
+            <summary>
+              Looks up a localized string similar to Comment details.
+            </summary>
+        </member>
+        <member name="P:DamnTools.SqlTodoExplorer.Properties.Resources.ColumnFullName">
+            <summary>
+              Looks up a localized string similar to Full name.
+            </summary>
+        </member>
+        <member name="P:DamnTools.SqlTodoExplorer.Properties.Resources.ColumnName">
+            <summary>
+              Looks up a localized string similar to Name.
+            </summary>
+        </member>
+        <member name="P:DamnTools.SqlTodoExplorer.Properties.Resources.ColumnObjectId">
+            <summary>
+              Looks up a localized string similar to Object id.
+            </summary>
+        </member>
+        <member name="P:DamnTools.SqlTodoExplorer.Properties.Resources.ColumnSchema">
+            <summary>
+              Looks up a localized string similar to Schema.
+            </summary>
+        </member>
+        <member name="P:DamnTools.SqlTodoExplorer.Properties.Resources.ColumnType">
+            <summary>
+              Looks up a localized string similar to Routine type.
+            </summary>
+        </member>
+        <member name="P:DamnTools.SqlTodoExplorer.Properties.Resources.Expand">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:DamnTools.SqlTodoExplorer.Properties.Resources.FileTypeTxt">
+            <summary>
+              Looks up a localized string similar to Text File|*.txt.
+            </summary>
+        </member>
+        <member name="P:DamnTools.SqlTodoExplorer.Properties.Resources.FileTypeXml">
+            <summary>
+              Looks up a localized string similar to XML File|*.xml.
+            </summary>
+        </member>
+        <member name="P:DamnTools.SqlTodoExplorer.Properties.Resources.FilterItemTypeAll">
+            <summary>
+              Looks up a localized string similar to (all).
+            </summary>
+        </member>
+        <member name="P:DamnTools.SqlTodoExplorer.Properties.Resources.GroupByItemTypeAll">
+            <summary>
+              Looks up a localized string similar to (all).
+            </summary>
+        </member>
+        <member name="P:DamnTools.SqlTodoExplorer.Properties.Resources.GroupByItemTypeCommentType">
+            <summary>
+              Looks up a localized string similar to Tag.
+            </summary>
+        </member>
+        <member name="P:DamnTools.SqlTodoExplorer.Properties.Resources.GroupByItemTypeFlat">
+            <summary>
+              Looks up a localized string similar to Flat.
+            </summary>
+        </member>
+        <member name="P:DamnTools.SqlTodoExplorer.Properties.Resources.GroupByItemTypeObjectType">
+            <summary>
+              Looks up a localized string similar to Object type.
+            </summary>
+        </member>
+        <member name="P:DamnTools.SqlTodoExplorer.Properties.Resources.NodeTextSchema">
+            <summary>
+              Looks up a localized string similar to Schema {0}.
+            </summary>
+        </member>
+        <member name="P:DamnTools.SqlTodoExplorer.Properties.Resources.PropertyIcon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:DamnTools.SqlTodoExplorer.Properties.Resources.refresh_16xLG">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:DamnTools.SqlTodoExplorer.Properties.Resources.RootNodeTextFunctions">
+            <summary>
+              Looks up a localized string similar to Functions.
+            </summary>
+        </member>
+        <member name="P:DamnTools.SqlTodoExplorer.Properties.Resources.RootNodeTextProcedures">
+            <summary>
+              Looks up a localized string similar to Procedures.
+            </summary>
+        </member>
+        <member name="P:DamnTools.SqlTodoExplorer.Properties.Resources.SearchWatermark">
+            <summary>
+              Looks up a localized string similar to Type to search....
+            </summary>
+        </member>
+        <member name="P:DamnTools.SqlTodoExplorer.Properties.Resources.Textfile_818_16x">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:DamnTools.SqlTodoExplorer.Properties.Resources.ViewTitle">
+            <summary>
+              Looks up a localized string similar to Sql Todo Explorer.
+            </summary>
+        </member>
+        <member name="P:DamnTools.SqlTodoExplorer.Properties.Resources.XMLFile_828_16x">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="T:DamnTools.SqlTodoExplorer.Services.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:DamnTools.SqlTodoExplorer.Services.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:DamnTools.SqlTodoExplorer.Services.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:DamnTools.SqlTodoExplorer.Services.Resources._1">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:DamnTools.SqlTodoExplorer.Services.Resources.Database_ExclusionList">
+            <summary>
+              Looks up a localized string similar to master,model,msdb,tempdb.
+            </summary>
+        </member>
+        <member name="P:DamnTools.SqlTodoExplorer.Services.Resources.DefaultTodoPatterns">
+             <summary>
+               Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+            &lt;ArrayOfTodoPattern&gt;
+                &lt;TodoPattern default=&quot;true&quot;&gt;
+                    &lt;Title&gt;Todo&lt;/Title&gt;
+                    &lt;SearchPattern&gt;&lt;![CDATA[(?&lt;=\W|^)(?&lt;TAG&gt;TODO)(.*)]]&gt;&lt;/SearchPattern&gt;
+                &lt;/TodoPattern&gt;
+                &lt;TodoPattern&gt;
+                    &lt;Title&gt;Hack&lt;/Title&gt;
+                    &lt;SearchPattern&gt;&lt;![CDATA[(?&lt;=\W|^)(?&lt;TAG&gt;HACK)(.*)]]&gt;&lt;/SearchPattern&gt;
+                &lt;/TodoPattern&gt;
+                &lt;TodoPattern&gt;
+                    &lt;Title&gt;Ask&lt;/Title&gt;
+                    &lt;SearchPattern&gt;&lt;![CDATA[(?&lt;=\W|^)(?&lt;TAG&gt;ASK)(.*)]]&gt;&lt;/SearchPattern&gt;
+                &lt;/TodoPattern&gt; [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:DamnTools.SqlTodoExplorer.Services.Resources.ScriptAsAlter_ReplaceRegex">
+            <summary>
+              Looks up a localized string similar to ^\s*CREATE(?=\s*(?:PROCEDURE|PROC|FUNCTION|FUNC)).
+            </summary>
+        </member>
+        <member name="P:DamnTools.SqlTodoExplorer.Services.Resources.SQL_Routine">
+             <summary>
+               Looks up a localized string similar to USE [{0}] -- Database name
+            SELECT
+            	  ROUTINE_OBJECTID		= SC.id
+            	, SR.ROUTINE_SCHEMA
+            	, SR.ROUTINE_NAME
+            	, ROUTINE_FULLNAME		= SR.ROUTINE_SCHEMA + &apos;.&apos; + SR.ROUTINE_NAME
+            	, SR.ROUTINE_TYPE
+            	, SC.colid
+            	, ROUTINE_DEFINITION	= SC.[text]
+            FROM
+            	INFORMATION_SCHEMA.ROUTINES	SR
+            	JOIN sys.syscomments		SC	ON SC.id = OBJECT_ID(ROUTINE_SCHEMA + &apos;.&apos; + ROUTINE_NAME)
+            WHERE
+            	SC.id = {1} -- OBJECT_ID
+            ORDER BY
+            	ROUTINE_OBJECTID, colid.
+             </summary>
+        </member>
+        <member name="P:DamnTools.SqlTodoExplorer.Services.Resources.SQL_Routines">
+             <summary>
+               Looks up a localized string similar to USE [{0}] -- Database name
+            SELECT
+            	  ROUTINE_OBJECTID		= SC.id
+            	, SR.ROUTINE_SCHEMA
+            	, SR.ROUTINE_NAME
+            	, ROUTINE_FULLNAME		= SR.ROUTINE_SCHEMA + &apos;.&apos; + SR.ROUTINE_NAME
+            	, SR.ROUTINE_TYPE
+            	, SC.colid
+            	, ROUTINE_DEFINITION	= SC.[text]
+            FROM
+            	INFORMATION_SCHEMA.ROUTINES	SR
+            	JOIN sys.syscomments		SC	ON SC.id = OBJECT_ID(ROUTINE_SCHEMA + &apos;.&apos; + ROUTINE_NAME)
+            ORDER BY
+            	ROUTINE_OBJECTID, colid.
+             </summary>
+        </member>
+    </members>
+</doc>
