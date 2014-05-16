@@ -24,7 +24,7 @@ Support for other versions are in the [issues] section.
 
 ##Install
 
-- Build the solution SqlTodoExplorer.sln
+- Build the solution SqlTodoExplorer.sln or download the [latest release](https://github.com/DamnTools/SqlTodoExplorer/releases)
 
 - Copy the `DamnTools.SqlTodoExplorer.dll` created in the bin folder to the following folder (create it if not exists):
 
