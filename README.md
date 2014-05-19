@@ -30,7 +30,7 @@ Support for other versions are in the [issues] section.
 
         C:\Program Files\DamnTools\SqlTodoExplorer
 
-- Copy the `DamnTools.SqlTodoExplorer.AddIn` file in the following folder  (create it if not exists):
+- Copy the `DamnTools.SqlTodoExplorer.AddIn` file (stored on \Source\SqlTodoExplorer folder) in the following folder  (create it if not exists):
 
         C:\ProgramData\Microsoft\SQL Server Management Studio\<SQL Server Version>\AddIns
 
