@@ -1,6 +1,4 @@
 
-![SQL Todo Explorer logo](https://raw.githubusercontent.com/wiki/DamnTools/SqlTodoExplorer/images/logo.png)
-
 "to-do" items can be marked as:
   - TODO
   - HACK
