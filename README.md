@@ -9,7 +9,7 @@
 
 ##Download
 
-    git clone https://github.com/DamnTools/SqlTodoExplorer.git
+    git clone https://github.com/engageitservices/SqlTodoExplorer.git
     
 ##Build
 
@@ -24,7 +24,7 @@ Support for other versions are in the [issues] section.
 
 ##Install
 
-- Build the solution SqlTodoExplorer.sln or download the [latest release](https://github.com/DamnTools/SqlTodoExplorer/releases)
+- Build the solution SqlTodoExplorer.sln or download the [latest release](https://github.com/engageitservices/SqlTodoExplorer/releases)
 
 - Copy the `DamnTools.SqlTodoExplorer.dll` created in the bin folder to the following folder (create it if not exists):
 
@@ -108,7 +108,7 @@ __Contributors__
 
 ##License
 
-DamnTools Sql Todo Explorer is released under the [MIT License].
+Engage It Services Sql Todo Explorer is released under the [MIT License].
 
 ##Icon
 
@@ -116,9 +116,9 @@ Icon and Logo created by [Daniela Malvisi]
 
 
 [Daniela Malvisi]: https://it.linkedin.com/pub/daniela-malvisi/61/859/275
-[MIT License]: https://github.com/DamnTools/SqlTodoExplorer/blob/master/LICENSE
-[contributor]: https://github.com/DamnTools/SqlTodoExplorer/graphs/contributors
+[MIT License]: https://github.com/engageitservices/SqlTodoExplorer/blob/master/LICENSE
+[contributor]: https://github.com/engageitservices/SqlTodoExplorer/graphs/contributors
 [@suxstellino]: https://twitter.com/suxstellino
 [@dennymic]: https://twitter.com/dennymic
-[issues]: https://github.com/DamnTools/SqlTodoExplorer/issues
+[issues]: https://github.com/engageitservices/SqlTodoExplorer/issues
 [GitHub flow]: http://scottchacon.com/2011/08/31/github-flow.html
